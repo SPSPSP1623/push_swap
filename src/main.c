@@ -32,6 +32,7 @@ char	**arg_split(int argc, char **argv)
 	free(arg_join);
 	return (arg);
 }
+
 void	push_swap(t_stack **stack_a, t_stack **stack_b)
 {
 	int	len;
@@ -50,8 +51,7 @@ void	push_swap(t_stack **stack_a, t_stack **stack_b)
 		sort_more(stack_a, stack_b);
 }
 
-
-void	print_stack(t_stack *stack)
+/* void	print_stack(t_stack *stack)
 {
 	ft_printf("\n");
 	while (stack)
@@ -62,17 +62,16 @@ void	print_stack(t_stack *stack)
 		stack = stack->next;
 	}
 	ft_printf("\n");
-}
+} */
 
 int	main(int argc, char *argv[])
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	char 	**arguments;
+	char	**arguments;
 
 	stack_a = NULL;
 	stack_b = NULL;
-
 	if (argc == 1)
 		return (0);
 	check_errors(argc, argv);
